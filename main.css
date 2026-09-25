@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    display: grid;
+    grid-template-rows: 8rem auto 8rem;
+    grid-template-areas: "header" "main" "footer";
+    background: #c31432;
+    background: -webkit-linear-gradient(to right, #240b36, #c31432); 
+    background: linear-gradient(to right, #240b36, #c31432);
+
+}
+
+header{
+    grid-area: header;
+    
+}
+
+main{
+    grid-area: main;
+
+}
+
+footer{
+    grid-area: footer;
+
+}
