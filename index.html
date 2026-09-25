@@ -5,11 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SN Travels</title>
     <link rel="icon" type="image/x-icon" href="favIcon.png">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <header>Hi</header>
-    <main>Hey</main>
+    <header>
+        <img src="Images/logo.png" alt="SN Travels Logo" class="logo" width="200" height="50"> 
+
+        <nav class="mobile-nav">
+            <i class="fa-solid fa-bars white-color"></i>
+        </nav>
+    </header>
+    <main>
+        <section class="hero-container">
+            <video src="Images/hero-promo.mp4" autoplay muted loop class="hero-promo-video"></video>
+            <section class="flight-search">
+                <h1 class="flight-title">Book Flights</h1>
+                <div class="flight-type">
+                    <button 
+                        class="flight-type__btn active" 
+                        id="return-btn" 
+                        onclick="activateFlightType('return-btn')"
+                    >Return</button>
+                    <button 
+                        class="flight-type__btn"
+                        id="one-way-btn" 
+                        onclick="activateFlightType('one-way-btn')"
+                    >One Way</button>
+                </div>
+                <form action="#" class="flight-search__form">
+                    <input type="text" placeholder="Where Frome?" name="origin">
+                    <input type="text" placeholder="Where To?" name="destination">
+                    <div class="flight-dates-and-NumOfPass">
+                        <input type="text" class="departure-date" name="departure-date" placeholder="When?">
+                        <input type="text" class="hidden" name="return-date" placeholder="When Back?">
+                        <input type="text" class="passenger-count" name="passenger-count" placeholder="Passengers">
+                    </div>
+                    <div class="direct-flight-container">
+                        <input type="checkbox" id="direct-flight" name="direct-flight">
+                        <label for="direct-flight" class="direct-flight-label">Direct Flight</label>
+                    </div>
+                    <button type="submit" class="search-flight-btn">Search flights</button>
+                </form>
+            </section>
+            <div class="overlay"></div>
+        </section>
+    </main>
     <footer>Goodbye</footer>
+    <script src="https://kit.fontawesome.com/dd16739d07.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="index.js"></script>
+    
 </body>
 </html>

@@ -10,25 +10,180 @@ html{
 body{
     height: 100%;
     display: grid;
-    grid-template-rows: 8rem auto 8rem;
+    grid-template-rows: 5rem auto 8rem;
     grid-template-areas: "header" "main" "footer";
-    background: #c31432;
-    background: -webkit-linear-gradient(to right, #240b36, #c31432); 
-    background: linear-gradient(to right, #240b36, #c31432);
+    background: #9c162d;
+    /* background: -webkit-linear-gradient(to right, #240b36, #c31432); 
+    background: linear-gradient(to right, #240b36, #c31432); */
 
 }
+
+input[type = "text"]{
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    border: 1px solid lightgray;
+
+}
+
 
 header{
     grid-area: header;
-    
+    background: #200122; 
+    background: -webkit-linear-gradient(to right, #6f0000, #200122);  
+    background: linear-gradient(to right, #6f0000, #200122);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
 }
+
+.logo{
+    width:12rem;
+    height:10rem;
+    object-fit:contain;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.mobile-nav .white-color{
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;    
+}
+
+
 
 main{
     grid-area: main;
-
 }
+
+.hero-container{
+    position:relative; 
+    width: 100%;
+    height: 50vh;
+}
+
+.hero-container .overlay{
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(5,5,5,0.3) 0%, rgba(5,5,5,0.1) 40%, rgba(5,5,5,0.7) 80%, rgba(5,5,5,1) 100%),
+    linear-gradient(to right, rgba(5,5,5,0.6) 0%, transparent 60%);
+    z-index: 2;
+}
+
+.hero-promo-video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flight-search{
+    
+    border: 1px solid lightgray;
+    padding: 1rem;
+    z-index: 3;
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+}
+
+.flight-search .flight-title{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #6f0000, white);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.flight-type{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.flight-type .flight-type__btn{
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #6f0000;
+    color: white;
+    width: 7rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.flight-type .flight-type__btn.active{
+    background-color: black;
+}
+
+.flight-type .flight-type__btn:hover{
+    background-color: #9c162d;     
+}
+
+.flight-search__form{
+    display: flex;
+    flex-direction: column;
+     z-index: 3;
+}
+
+.flight-search__form *{
+    outline: none;
+}
+
+.flight-search__form .hidden{
+    display: none;
+}
+
+.flight-dates-and-NumOfPass{
+    margin: 0.5rem 0;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.departure-date{
+    width: 70%;
+}
+.passenger-count{
+    width: 30%;
+}
+
+.direct-flight-label{
+    color: lightgray
+}
+
+.search-flight-btn{
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #6f0000;
+    color: white;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 18px;
+}
+
+.search-flight-btn:hover{
+    background-color: white;
+    color: #6f0000;
+}   
+
+
 
 footer{
     grid-area: footer;
 
 }
+
+
